@@ -34,8 +34,10 @@ var articles={
 
 function createTemplete(data){
   var title=data.title;
-  var data=data.date;
-  var heading=data.content;
+  var date=data.date;
+  var heading=data.heading;
+  var content=date.content;
+  
   var htmlTempletes=`
 <html>
     <head>
@@ -72,7 +74,7 @@ return htmlTempletes;
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});
+})
 app.get('/:articleName', function (req, res) {
     var articleName=req.params.articleName;
   res.send(createTemplete(articles[articleName]));

@@ -67,7 +67,7 @@ function createTemplete(data){
     </body>
 </html>
 `;
-return htmlTempletes;
+return htmlTemplete;
 }
 
 
